@@ -1,69 +1,48 @@
-# int add(int first_number, int second_number)
-# {
-#     return first_number + second_number;
-# }
+def add(first_number, second_number)
+    first_number + second_number
+end
 
-# int subtract(int first_number, int second_number)
-# {
-#     return first_number - second_number;
-# }
+def subtract(first_number, second_number)
+    first_number - second_number
+end
 
-# int multiply(int first_number, int second_number)
-# {
-#     return first_number * second_number;
-# }
+def multiply(first_number, second_number)
+    first_number * second_number
+end
 
-# int divide(int first_number, int second_number)
-# {
-#     return first_number / second_number;
-# }
+def divide(first_number, second_number)
+    first_number / second_number
+end
 
-# int mod(int first_number, int second_number)
-# {
-#     return first_number % second_number;
-# }
+def mod(first_number, second_number)
+    first_number % second_number
+end
 
-# #include <stdio.h>
-# #include "functions.h"
+def main()
+    puts "First number: "
+    gets first_number
 
-# int main(void)
-# {
-#     int first_number;
-#     printf("First number: ");
-#     scanf("%d", &first_number);
+    puts "Operator (+, -, *, /, %): "
+    gets operator
 
-#     char operator;
-#     printf("Operator (+, -, *, /): ");
-#     scanf("%c", &operator);
+    puts "Second number: "
+    gets second_number
 
-#     int second_number;
-#     printf("Second number: ");
-#     scanf("%d", &second_number);
+    if operator == "+"
+        result = add(first_number, second_number)
+    elsif operator == "-"
+        result = subtract(first_number, second_number)
+    elsif operator == "*"
+        result = multiply(first_number, second_number)
+    elsif operator == "/"
+        result = divide(first_number, second_number)
+    elsif operator == "%"
+        result = mod(first_number, second_number)
+    else
+        result = "Invalid operator. Please try again."
+    end
 
-#     int result;
-#     switch (operator)
-#     {
-#         case '+':
-#             result = add(first_number, second_number);
-#             break;
-#         case '-':
-#             result = subtract(first_number, second_number);
-#             break;
-#         case '*':
-#             result = multiply(first_number, second_number);
-#             break;
-#         case '/':
-#             result = divide(first_number, second_number);
-#             break;
-#         case '%':
-#             result = mod(first_number, second_number);
-#             break;
-#         default:
-#             result = -1;
-#             break;
-#     }
+    puts "Result: " + result
+end
 
-#     printf("Result: %d\n", result);
-
-#     return 0;
-# }
+main()
