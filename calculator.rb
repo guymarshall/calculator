@@ -20,13 +20,13 @@ end
 
 def main()
     puts "First number: "
-    gets first_number
+    first_number = gets
 
     puts "Operator (+, -, *, /, %): "
-    gets operator
+    operator = gets
 
     puts "Second number: "
-    gets second_number
+    second_number = gets
 
     if operator == "+"
         result = add(first_number, second_number)
